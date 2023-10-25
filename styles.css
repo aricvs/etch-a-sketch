@@ -5,3 +5,11 @@
 .main-header {
   text-align: center;
 }
+
+.grid-container {
+  height: 30rem;
+  width: 30rem;
+  border: 1px solid red;
+  margin-left: auto;
+  margin-right: auto;
+}
