@@ -6,6 +6,7 @@
   text-align: center;
 }
 
+/* TODO: make the cells fit in a symmetrical grid */
 .grid-container {
   height: 30rem;
   width: 30rem;
@@ -13,10 +14,11 @@
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .grid-cell {
   border: 1px solid blue;
-  height: 2rem;
-  width: 2rem;
+  height: 1rem;
+  width: 1rem;
 }
