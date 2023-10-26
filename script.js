@@ -11,8 +11,9 @@ function generateGrid(gridSize) {
 
 function hoverPaint() {
   const gridCells = document.querySelectorAll(".grid-cell");
+
   gridCells.forEach((cell) =>
-    cell.addEventListener("mouseover", function () {
+    cell.addEventListener("mouseover", () => {
       cell.style.backgroundColor = "black";
     })
   );
