@@ -41,7 +41,6 @@ function setGridSize() {
 
 function clearGrid() {
   const clearGridBtn = document.querySelector(".clear-grid-btn");
-  const gridContainer = document.querySelector(".grid-container");
 
   clearGridBtn.addEventListener("click", () => {
     const gridCells = document.querySelectorAll(".grid-cell");
@@ -50,9 +49,15 @@ function clearGrid() {
 }
 
 // TODO: add a rainbow paint button
+
+function rainbowPaint() {
+  return;
+}
+
 // TODO: add a progressive color button
 
 generateGrid(16);
 hoverPaint();
 setGridSize();
 clearGrid();
+rainbowPaint();
