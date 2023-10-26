@@ -9,12 +9,12 @@ function generateGrid(gridSize) {
   }
 }
 
-function hoverPaint() {
+function hoverPaint(color) {
   const gridCells = document.querySelectorAll(".grid-cell");
 
   gridCells.forEach((cell) =>
     cell.addEventListener("mouseover", () => {
-      cell.style.backgroundColor = "black";
+      cell.style.backgroundColor = color;
     })
   );
 }
@@ -35,7 +35,7 @@ function setGridSize() {
     }
 
     generateGrid(newSize);
-    hoverPaint();
+    hoverPaint("black");
   });
 }
 
@@ -57,21 +57,25 @@ function rainbowModeToggle() {
   rainbowBtn.addEventListener("click", () => {
     if (rainbowOn === false) {
       rainbowOn = true;
+      rainbowBtn.style.backgroundColor = "green";
+      hoverPaint(rainbowColor());
     } else {
       rainbowOn = false;
+      rainbowBtn.style.removeProperty("background-color");
+      hoverPaint("black");
     }
   });
 }
 
 function rainbowColor() {
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-  document.body.style.backgroundColor = "#" + randomColor;
+  return "#" + randomColor;
 }
 
 // TODO: add a progressive color button
 
 generateGrid(16);
-hoverPaint();
+hoverPaint("black");
 setGridSize();
 clearGrid();
 rainbowModeToggle();
