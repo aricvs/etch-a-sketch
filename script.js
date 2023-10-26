@@ -39,10 +39,20 @@ function setGridSize() {
   });
 }
 
-// TODO: add a clear button
+function clearGrid() {
+  const clearGridBtn = document.querySelector(".clear-grid-btn");
+  const gridContainer = document.querySelector(".grid-container");
+
+  clearGridBtn.addEventListener("click", () => {
+    const gridCells = document.querySelectorAll(".grid-cell");
+    gridCells.forEach((cell) => cell.style.removeProperty("background-color"));
+  });
+}
+
 // TODO: add a rainbow paint button
 // TODO: add a progressive color button
 
 generateGrid(16);
 hoverPaint();
 setGridSize();
+clearGrid();
