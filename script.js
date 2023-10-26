@@ -48,8 +48,6 @@ function clearGrid() {
   });
 }
 
-// TODO: add a rainbow paint button
-
 function rainbowModeToggle() {
   const rainbowBtn = document.querySelector(".rainbow-btn");
   let rainbowOn = false;
@@ -58,7 +56,14 @@ function rainbowModeToggle() {
     if (rainbowOn === false) {
       rainbowOn = true;
       rainbowBtn.style.backgroundColor = "green";
-      hoverPaint(rainbowColor());
+
+      const gridCells = document.querySelectorAll(".grid-cell");
+
+      gridCells.forEach((cell) =>
+        cell.addEventListener("mouseover", () => {
+          cell.style.backgroundColor = rainbowColor();
+        })
+      );
     } else {
       rainbowOn = false;
       rainbowBtn.style.removeProperty("background-color");
