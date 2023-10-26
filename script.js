@@ -9,12 +9,12 @@ function generateGrid(gridSize) {
   }
 }
 
-function hoverPaint(color) {
+function hoverPaint() {
   const gridCells = document.querySelectorAll(".grid-cell");
 
   gridCells.forEach((cell) =>
     cell.addEventListener("mouseover", () => {
-      cell.style.backgroundColor = color;
+      cell.style.backgroundColor = "black";
     })
   );
 }
@@ -35,7 +35,7 @@ function setGridSize() {
     }
 
     generateGrid(newSize);
-    hoverPaint("black");
+    hoverPaint();
   });
 }
 
@@ -62,7 +62,7 @@ function rainbowModeToggle() {
     } else {
       rainbowOn = false;
       rainbowBtn.style.removeProperty("background-color");
-      hoverPaint("black");
+      hoverPaint();
     }
   });
 }
@@ -75,7 +75,7 @@ function rainbowColor() {
 // TODO: add a progressive color button
 
 generateGrid(16);
-hoverPaint("black");
+hoverPaint();
 setGridSize();
 clearGrid();
 rainbowModeToggle();
