@@ -19,14 +19,26 @@ function hoverPaint() {
   );
 }
 
-const gridSizeBtn = document.querySelector(".grid-size-btn");
-const gridContainer = document.querySelector(".grid-container");
+function setGridSize() {
+  const gridSizeBtn = document.querySelector(".grid-size-btn");
+  const gridContainer = document.querySelector(".grid-container");
 
-gridSizeBtn.addEventListener("click", () => {
-  while (gridContainer.firstChild) {
-    gridContainer.removeChild(gridContainer.lastChild);
-  }
-});
+  gridSizeBtn.addEventListener("click", () => {
+    let newSize = 0;
+
+    while (newSize == 0 || newSize > 100) {
+      newSize = prompt("Choose new size for grid, max: 100");
+    }
+
+    while (gridContainer.firstChild) {
+      gridContainer.removeChild(gridContainer.lastChild);
+    }
+
+    generateGrid(newSize);
+    hoverPaint();
+  });
+}
 
 generateGrid(16);
 hoverPaint();
+setGridSize();
