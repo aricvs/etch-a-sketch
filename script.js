@@ -19,5 +19,14 @@ function hoverPaint() {
   );
 }
 
+const gridSizeBtn = document.querySelector(".grid-size-btn");
+const gridContainer = document.querySelector(".grid-container");
+
+gridSizeBtn.addEventListener("click", () => {
+  while (gridContainer.firstChild) {
+    gridContainer.removeChild(gridContainer.lastChild);
+  }
+});
+
 generateGrid(16);
 hoverPaint();
