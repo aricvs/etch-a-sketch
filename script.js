@@ -50,8 +50,17 @@ function clearGrid() {
 
 // TODO: add a rainbow paint button
 
-function rainbowPaint() {
-  return;
+function rainbowModeToggle() {
+  const rainbowBtn = document.querySelector(".rainbow-btn");
+  let rainbowOn = false;
+
+  rainbowBtn.addEventListener("click", () => {
+    if (rainbowOn === false) {
+      rainbowOn = true;
+    } else {
+      rainbowOn = false;
+    }
+  });
 }
 
 // TODO: add a progressive color button
@@ -60,4 +69,4 @@ generateGrid(16);
 hoverPaint();
 setGridSize();
 clearGrid();
-rainbowPaint();
+rainbowModeToggle();
