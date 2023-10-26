@@ -9,4 +9,14 @@ function generateGrid(gridSize) {
   }
 }
 
+function hoverPaint() {
+  const gridCells = document.querySelectorAll(".grid-cell");
+  gridCells.forEach((cell) =>
+    cell.addEventListener("mouseover", function () {
+      cell.style.backgroundColor = "black";
+    })
+  );
+}
+
 generateGrid(16);
+hoverPaint();
