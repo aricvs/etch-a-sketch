@@ -12,9 +12,21 @@
   text-align: center;
 }
 
+.grid-size-text {
+  margin: 0;
+}
+
+.grid-size-field {
+}
+
 .grid-size-btn {
-  width: 7rem;
-  height: 3rem;
+}
+
+.set-grid-size {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
 }
 
 .grid-container {
