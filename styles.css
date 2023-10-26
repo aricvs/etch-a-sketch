@@ -2,16 +2,25 @@
   font-family: sans-serif;
 }
 
+.main-container {
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+}
+
 .main-header {
   text-align: center;
+}
+
+.grid-size-btn {
+  width: 7rem;
+  height: 3rem;
 }
 
 .grid-container {
   height: 30rem;
   width: 30rem;
   border: 1px solid gray;
-  margin-left: auto;
-  margin-right: auto;
   display: grid;
 }
 
