@@ -39,6 +39,10 @@ function setGridSize() {
   });
 }
 
+// TODO: add a clear button
+// TODO: add a rainbow paint button
+// TODO: add a progressive color button
+
 generateGrid(16);
 hoverPaint();
 setGridSize();
